@@ -1,0 +1,99 @@
+.App {
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.left-panel, .right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.center-panel {
+  display: flex;
+  justify-content: center;
+}
+
+.claim-btn {
+  background: linear-gradient(45deg, #00b894, #00a085);
+  font-size: 18px;
+  padding: 15px 30px;
+}
+
+.claim-btn:hover {
+  background: linear-gradient(45deg, #00a085, #008f7a);
+}
+
+.called-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.called-number {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 30px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.winner-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b894;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .left-panel, .right-panel {
+    order: 2;
+  }
+  
+  .center-panel {
+    order: 1;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
