@@ -1,0 +1,206 @@
+.game-status {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.status-header h2 {
+  color: #333;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-label {
+  color: #666;
+  font-weight: bold;
+}
+
+.player-name {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.status-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #667eea;
+}
+
+.status-card h3 {
+  color: #333;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.current-number .number-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.number-letter {
+  background: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.number-value {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.no-number {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+.progress-info {
+  text-align: center;
+}
+
+.progress-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-label {
+  color: #666;
+  font-weight: bold;
+}
+
+.progress-value {
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #00b894, #00a085);
+  transition: width 0.3s ease;
+}
+
+.recent-calls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.call-letter {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.call-number {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+.no-calls {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .status-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .status-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .status-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .current-number .number-display {
+    padding: 15px;
+  }
+  
+  .number-value {
+    font-size: 28px;
+  }
+  
+  .number-letter {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
